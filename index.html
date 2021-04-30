@@ -13,19 +13,24 @@
       line-height: 1.2;
     }
 
-    .lifecycle {
+    .covid-container {
       padding: 0 28px;
       max-width: 960px;
-      margin: 20px auto;
+      margin: 0 auto 80px;
     }
 
-    .lifecycle h1 {
+    .lifecycle {
+      margin: 20px auto 50px;
+    }
+
+    .lifecycle h1,
+    .faq h1 {
       display: block;
       text-align: center;
       font-size: 20px;
     }
 
-    .lifecycle .box {
+    .covid-container .box {
       text-align: center;
       border-radius: 14px;
       font-weight: bold;
@@ -37,23 +42,28 @@
       justify-content: center;
     }
 
-    .lifecycle .box.yellow {
+    .covid-container .box.yellow {
       background-color: #FFFACC;
     }
 
-    .lifecycle .box.pink {
+    .covid-container .box.pink {
       background-color: #FFCCFA;
     }
 
-    .lifecycle .box.red {
+    .covid-container .box.red {
       background-color: #FFBBBB;
     }
 
-    .lifecycle .box.green {
+    .covid-container .box.green {
       background-color: #C1FDAC;
     }
 
-    .lifecycle .border-box {
+    .covid-container .box.grey {
+      background-color: #fdfdfd;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .covid-container .border-box {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -67,122 +77,217 @@
       opacity: 50%;
     }
 
-    .lifecycle .row {
+    .covid-container .row {
       display: flex;
       align-items: center;
       justify-content: space-around;
       margin-top: 24px;
     }
 
-    .lifecycle .row .col {
+    .covid-container .row .col {
       width: 50%;
     }
 
-    .lifecycle .row .col:first-child {
+    .covid-container .lifecycle .row .col:first-child {
       margin-right: 24px;
     }
 
-    .lifecycle .row.collapsable {
+    .covid-container .faq .row .col:first-child {
+      margin-right: 24px;
+      margin-bottom: 24px;
+    }
+
+    .covid-container .row.collapsable {
       display: block;
     }
 
-    .lifecycle .row.collapsable .col {
+    .covid-container .row.collapsable .col {
       width: 100%;
     }
 
-    @media screen and (min-width: 700px) {
-      .lifecycle h1 {
+    .covid-container .faq a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .covid-container .question {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .covid-container .question img {
+      width: 16%;
+    }
+
+    .covid-container .question p {
+      font-size: 14px;
+      padding: 0 32px;
+    }
+
+    @media screen and (min-width: 860px) {
+      .lifecycle h1,
+      .faq h1 {
         font-size: 32px;
         margin: 48px 0;
       }
 
-      .lifecycle .box {
+      .covid-container .box {
         border-radius: 20px;
         padding: 25px;
         min-height: 220px;
         font-size: 28px;
       }
 
-      .lifecycle .border-box {
+      .covid-container .border-box {
         border-width: 2px;
       }
 
-      .lifecycle .row.collapsable {
+      .covid-container .row.collapsable {
         display: flex;
         align-items: center;
         justify-content: space-around;
         margin-top: 24px;
       }
 
-      .lifecycle .row.collapsable .col .border-box {
+      .covid-container .row.collapsable .col .border-box {
         min-height: 153px;
+      }
+
+      .covid-container .row .col:first-child {
+        margin-bottom: 0;
       }
 
       .lifecycle .arrow {
         margin: 56px auto;
       }
+
+      .covid-container .question p {
+        font-size: 16px;
+        padding: 0 12px;
+      }
+
+      .covid-container .question img {
+        width: 30%;
+      }
+    }
+    
+    /* iPad */
+    @media screen and (min-width: 768px) and (max-width: 860px) {
+      .covid-container .question img {
+        width: 10%;
+      }
     }
   </style>
-  <main class="lifecycle">
-    <h1>Lifecycle of a COVID-19 Patient</h1>
-    <div class="row collapsable">
-      <div class="col">
-        <div class="box yellow">Symptoms Detected</div>
-      </div>
-      <div class="col">
-        <div class="border-box">
-          <p>How to detect? <a href="#">See video</a></p>
+  <div class="covid-container">
+    <section class="lifecycle">
+      <h1>Lifecycle of a COVID-19 Patient</h1>
+      <div class="row collapsable">
+        <div class="col">
+          <div class="box yellow">Symptoms Detected</div>
+        </div>
+        <div class="col">
+          <div class="border-box">
+            <p>How to detect? <a href="javascript:voic(0);">See video</a></p>
+          </div>
         </div>
       </div>
-    </div>
-    <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
-    <div class="row collapsable">
-      <div class="col">
-        <div class="box pink">Get COVID-19 Test Done</div>
-      </div>
-      <div class="col">
-        <div class="border-box">
-          <p>Where to get tested? <a href="#">Resources</a></p>
+      <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
+      <div class="row collapsable">
+        <div class="col">
+          <div class="box pink">Get COVID-19 Test Done</div>
+        </div>
+        <div class="col">
+          <div class="border-box">
+            <p>Where to get tested? <a href="javascript:voic(0);">Resources</a></p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
+      <div class="row">
+        <div class="col">
+          <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
+        </div>
+        <div class="col">
+          <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
+        </div>
       </div>
-      <div class="col">
-        <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
+      <div class="row">
+        <div class="col">
+          <div class="box red">Positive</div>
+          <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
+          <div class="box red">Home Isolation</div>
+        </div>
+        <div class="col">
+          <div class="box green">Negative</div>
+          <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
+          <div class="box green">Stay Home</div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="box red">Positive</div>
-        <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
-        <div class="box red">Home Isolation</div>
+      <div class="row">
+        <div class="col">
+          <div class="box red">Or, Hospital</div>
+        </div>
+        <div class="col">
+          <div class="box green">Wear Masks</div>
+        </div>
       </div>
-      <div class="col">
-        <div class="box green">Negative</div>
-        <img src="https://svgshare.com/i/WiQ.svg" class="arrow" />
-        <div class="box green">Stay Home</div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="box green">Social Distancing</div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="box red">Or, Hospital</div>
+      <div class="border-box">
+        <p>COVID Helpline: <a href="tel:9717543490">9717543490</a></p>
       </div>
-      <div class="col">
-        <div class="box green">Wear Masks</div>
+    </section>
+    <section class="faq">
+      <h1>Frequently Asked Questions</h1>
+      <div class="row collapsable">
+        <div class="col">
+          <div class="row collapsable">
+            <div class="col">
+              <a href="javascript:voic(0);">
+                <div class="box grey question">
+                  <img src="https://svgshare.com/i/Wnb.svg" alt="Play Icon" />
+                  <p>Do I need to wear a mask after recovering from COVID-19?</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="javascript:voic(0);">
+                <div class="box grey question">
+                  <img src="https://svgshare.com/i/Wnb.svg" alt="Play Icon" />
+                  <p>Can I be COVID positive after being vaccinated?</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row collapsable">
+            <div class="col">
+              <a href="javascript:voic(0);">
+                <div class="box grey question">
+                  <img src="https://svgshare.com/i/Wnb.svg" alt="Play Icon" />
+                  <p>Can I sit in the same room with a COVID patient?</p>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="javascript:voic(0);">
+                <div class="box grey question">
+                  <img src="https://svgshare.com/i/Wnb.svg" alt="Play Icon" />
+                  <p>What type of mask will protect me from COVID-19?</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col">
-        <div class="box green">Social Distancing</div>
-      </div>
-    </div>
-    <div class="border-box">
-      <p>COVID Helpline: <a href="tel:9717543490">9717543490</a></p>
-    </div>
-  </main>
+    </section>
+  </div>
 </body>
 </html>
