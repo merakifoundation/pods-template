@@ -66,6 +66,10 @@
   filter: saturate(75%);
 }
 
+.covid-container .box.gray {
+  background-color: #e7e7e7;
+}
+
 .covid-container .box.yellow {
   background-color: #fffacc;
 }
